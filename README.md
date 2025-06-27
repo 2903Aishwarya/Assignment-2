@@ -204,8 +204,3 @@ Open a Pull Request on GitHub.
 **Aishwarya Verma**  
 GitHub: [2903Aishwarya](https://github.com/2903Aishwarya)
 
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
