@@ -1,0 +1,37 @@
+name: Node.js API CI + Keploy Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    services:
+      mongo:
+        image: mongo:6
+        ports:
+          - 27017:27017
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Run Unit + Integration Tests
+      run: npm test -- --coverage
+
+    - name: Run Keploy Test
+      run: |
+        curl -s https://raw.githubusercontent.com/keploy/keploy/main/install.sh | bash
+        keploy test --delay 10
