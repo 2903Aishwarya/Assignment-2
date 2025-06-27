@@ -133,8 +133,6 @@ npm test -- --coverage
 ### 🧪 Keploy Test Report
 Keploy was used to generate and run test cases automatically.
 
-![Keploy Test Report](./screenshots/keploy-report.png)
-
 ### ⚙️ CI/CD Setup
 GitHub Actions is used to automate testing and Keploy validation on every push.
 
@@ -203,7 +201,7 @@ Open a Pull Request on GitHub.
 
 ## 👩‍💻 Author
 
-**Aishwarya Vera**  
+**Aishwarya Verma**  
 GitHub: [2903Aishwarya](https://github.com/2903Aishwarya)
 
 ---
